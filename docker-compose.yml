@@ -1,0 +1,13 @@
+version: '3'
+
+services: 
+  web:
+    build: .
+    tty: true
+    volumes:
+      - "./source/app:/app"
+    environment:
+      - PORT=8000
+    ports:
+      - "8000:8000"
+  
